@@ -38,43 +38,59 @@
   </head>
   <body>
     <!-- navbar -->
-    <nav class="h-20 flex justify-between items-center mx-[110px]">
-      <div class="flex gap-12">
-        <img class="w-[110px] h-6" src="./assets/logo.png" alt="" />
-        <ul class="flex gap-8">
-          <li
-            class="hover:cursor-pointer hover:underline hover:underline-offset-2"
-          >
-            Office
-          </li>
-          <li
-            class="hover:cursor-pointer hover:underline hover:underline-offset-2"
-          >
-            windows
-          </li>
-          <li
-            class="hover:cursor-pointer hover:underline hover:underline-offset-2"
-          >
-            Surface
-          </li>
-          <li
-            class="hover:cursor-pointer hover:underline hover:underline-offset-2"
-          >
-            Xbox
-          </li>
-          <li
-            class="hover:cursor-pointer hover:underline hover:underline-offset-2"
-          >
-            Deals
-          </li>
-          <li
-            class="hover:cursor-pointer hover:underline hover:underline-offset-2"
-          >
-            Support
-          </li>
-        </ul>
+    <nav
+      class="h-20 flex justify-between items-center px-4 sm:px-8 md:px-[110px]"
+    >
+      <div class="flex items-center gap-4 md:gap-12">
+        <img
+          class="w-8 h-8 md:w-[110px] md:h-6"
+          src="./assets/logo.png"
+          alt="Logo"
+        />
       </div>
-      <div class="flex gap-4">
+      <!-- Hamburger Icon -->
+      <div class="md:hidden">
+        <button id="menu-button" class="focus:outline-none">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
+      <!-- Menu Items -->
+      <ul
+        id="menu-items"
+        class="hidden md:flex flex-col md:flex-row gap-4 md:gap-8 absolute md:static top-20 right-0 bg-white md:bg-transparent w-full md:w-auto p-6 md:p-0 shadow-md md:shadow-none"
+      >
+        <li
+          class="hover:cursor-pointer hover:underline hover:underline-offset-2"
+        >
+          Office
+        </li>
+        <li
+          class="hover:cursor-pointer hover:underline hover:underline-offset-2"
+        >
+          Windows
+        </li>
+        <li
+          class="hover:cursor-pointer hover:underline hover:underline-offset-2"
+        >
+          Surface
+        </li>
+        <li
+          class="hover:cursor-pointer hover:underline hover:underline-offset-2"
+        >
+          Xbox
+        </li>
+        <li
+          class="hover:cursor-pointer hover:underline hover:underline-offset-2"
+        >
+          Deals
+        </li>
+        <li
+          class="hover:cursor-pointer hover:underline hover:underline-offset-2"
+        >
+          Support
+        </li>
+      </ul>
+      <div class="hidden md:flex gap-4">
         <i
           class="fas fa-search hover:cursor-pointer hover:underline hover:decoration-2 hover:underline-offset-4"
         ></i>
@@ -84,7 +100,7 @@
       </div>
     </nav>
 
-    <main class="mx-[110px]">
+    <main class="md:mx-[110px] mx-8">
       <!-- header -->
       <section
         class="h-[500px] w-full header flex flex-col items-center justify-center"
@@ -103,7 +119,7 @@
       </section>
 
       <!-- cards1 -->
-      <section class="grid grid-cols-4 gap-6 mt-8">
+      <section class="grid grid-cols-1 md:grid-cols-4 gap-6 mt-8">
         <div class="">
           <img
             src="./assets/card1.png"
@@ -199,7 +215,7 @@
       </section>
 
       <!-- cards2 -->
-      <section class="grid grid-cols-4 gap-6 mt-8">
+      <section class="grid grid-cols-1 md:grid-cols-4 gap-6 mt-8">
         <div class="">
           <img
             src="./assets/card5.png"
@@ -292,16 +308,28 @@
       <section class="mt-8">
         <div class="flex items-center gap-4">
           <h1>Follow Microsoft</h1>
-          <a href="https://www.facebook.com/"><img class="hover:scale-105" src="./assets/social-fb.png" alt="" /></a>
-          <a href="https://twitter.com"><img class="hover:scale-105" src="./assets/social-twitter.png" alt="" /></a>
-          <a href="linkedin.com"><img class="hover:scale-105" src="./assets/social-linkedin.png" alt="" /></a>
+          <a href="https://www.facebook.com/"
+            ><img class="hover:scale-105" src="./assets/social-fb.png" alt=""
+          /></a>
+          <a href="https://twitter.com"
+            ><img
+              class="hover:scale-105"
+              src="./assets/social-twitter.png"
+              alt=""
+          /></a>
+          <a href="linkedin.com"
+            ><img
+              class="hover:scale-105"
+              src="./assets/social-linkedin.png"
+              alt=""
+          /></a>
         </div>
       </section>
     </main>
 
     <!-- footer -->
-    <footer class="bg-secondary px-[110px] p-8 mt-8">
-      <div class="flex justify-between">
+    <footer class="bg-secondary px-8 md:px-[110px] p-8 mt-8">
+      <div class="md:flex justify-between">
         <div class="">
           <h1 class="font-bold text-sm text-gray-600">What's New</h1>
           <ul class="text-xs mt-3">
@@ -369,11 +397,11 @@
         </div>
       </div>
 
-      <div class="flex items-center w-full gap-16 mt-8 mb-5">
+      <div class="md:flex items-center w-full gap-16 mt-8 mb-5">
         <div class="flex items-center text-gray-500 gap-4 text-xs">
           <i class="fas fa-globe fa-2x"></i> English (United States)
         </div>
-        <div class="flex justify-between text-xs w-4/5">
+        <div class="md:flex justify-between text-xs w-4/5">
           <a href="">Sitemap</a><a href="">Contact Microsfot</a
           ><a href="">Privacy & cookies</a><a href="">Terms of use</a
           ><a href="">Trademarks</a><a href="">Safety & education</a
@@ -397,9 +425,15 @@
         distance: "60%",
         interval: 250,
       });
-      sr.reveal(".xbox", { delay: 300,origin:"right" });
+      sr.reveal(".xbox", { delay: 300, origin: "right" });
       sr.reveal(".carbon", { delay: 300 });
       sr.reveal("footer", { delay: 300 });
+    </script>
+    <script>
+      document.getElementById("menu-button").onclick = function () {
+        const menuItems = document.getElementById("menu-items");
+        menuItems.classList.toggle("hidden");
+      };
     </script>
   </body>
 </html>
