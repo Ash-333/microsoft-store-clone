@@ -11,6 +11,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -37,21 +38,49 @@
   </head>
   <body>
     <!-- navbar -->
-    <nav class="h-20 flex justify-between items-center  mx-[110px]">
+    <nav class="h-20 flex justify-between items-center mx-[110px]">
       <div class="flex gap-12">
         <img class="w-[110px] h-6" src="./assets/logo.png" alt="" />
         <ul class="flex gap-8">
-          <li class="hover:cursor-pointer hover:underline hover:underline-offset-2">Office</li>
-          <li class="hover:cursor-pointer hover:underline hover:underline-offset-2">windows</li>
-          <li class="hover:cursor-pointer hover:underline hover:underline-offset-2">Surface</li>
-          <li class="hover:cursor-pointer hover:underline hover:underline-offset-2">Xbox</li>
-          <li class="hover:cursor-pointer hover:underline hover:underline-offset-2">Deals</li>
-          <li class="hover:cursor-pointer hover:underline hover:underline-offset-2">Support</li>
+          <li
+            class="hover:cursor-pointer hover:underline hover:underline-offset-2"
+          >
+            Office
+          </li>
+          <li
+            class="hover:cursor-pointer hover:underline hover:underline-offset-2"
+          >
+            windows
+          </li>
+          <li
+            class="hover:cursor-pointer hover:underline hover:underline-offset-2"
+          >
+            Surface
+          </li>
+          <li
+            class="hover:cursor-pointer hover:underline hover:underline-offset-2"
+          >
+            Xbox
+          </li>
+          <li
+            class="hover:cursor-pointer hover:underline hover:underline-offset-2"
+          >
+            Deals
+          </li>
+          <li
+            class="hover:cursor-pointer hover:underline hover:underline-offset-2"
+          >
+            Support
+          </li>
         </ul>
       </div>
       <div class="flex gap-4">
-        <i class="fas fa-search hover:cursor-pointer hover:underline hover:decoration-2 hover:underline-offset-4"></i>
-        <i class="fa-solid fa-cart-shopping hover:cursor-pointer hover:underline hover:decoration-2 hover:underline-offset-4"></i>
+        <i
+          class="fas fa-search hover:cursor-pointer hover:underline hover:decoration-2 hover:underline-offset-4"
+        ></i>
+        <i
+          class="fa-solid fa-cart-shopping hover:cursor-pointer hover:underline hover:decoration-2 hover:underline-offset-4"
+        ></i>
       </div>
     </nav>
 
@@ -345,16 +374,28 @@
           <i class="fas fa-globe fa-2x"></i> English (United States)
         </div>
         <div class="flex justify-between text-xs w-4/5">
-          <a href="">Sitemap</a
-          ><a href="">Contact Microsfot</a
-          ><a href="">Privacy & cookies</a
-          ><a href="">Terms of use</a
-          ><a href="">Trademarks</a
-          ><a href="">Safety & education</a
-          ><a href="">About our ads</a
-          ><a href="">© Microsoft 2020</a>
-          </div>
+          <a href="">Sitemap</a><a href="">Contact Microsfot</a
+          ><a href="">Privacy & cookies</a><a href="">Terms of use</a
+          ><a href="">Trademarks</a><a href="">Safety & education</a
+          ><a href="">About our ads</a><a href="">© Microsoft 2020</a>
+        </div>
       </div>
     </footer>
+
+    <script>
+      const sr = ScrollReveal({
+        origin: "bottom",
+        distance: "50px",
+        duration: 1000,
+        delay: 200,
+        reset: false,
+      });
+
+      sr.reveal(".header", { delay: 300 });
+      sr.reveal(".grid > div", { interval: 200 });
+      sr.reveal(".xbox", { delay: 300 });
+      sr.reveal(".carbon", { delay: 300 });
+      sr.reveal("footer", { delay: 300 });
+    </script>
   </body>
 </html>
