@@ -392,7 +392,11 @@
       });
 
       sr.reveal(".header", { delay: 300 });
-      sr.reveal(".grid > div", { interval: 200 });
+      sr.reveal(".grid > div", {
+        origin: "left",
+        distance: "60%",
+        interval: 250,
+      });
       sr.reveal(".xbox", { delay: 300 });
       sr.reveal(".carbon", { delay: 300 });
       sr.reveal("footer", { delay: 300 });
